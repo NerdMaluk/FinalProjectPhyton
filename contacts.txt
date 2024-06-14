@@ -1,0 +1,4 @@
+{'nome': 'Flavio', 'email': 'nerd1@gmail.com', 'telefone': '9888344', 'endereco': 'mindelo'}
+{'nome': 'Milly', 'email': 'milly@gmail.com', 'telefone': '9580033', 'endereco': 'Porto'}
+{'nome': 'Eloa', 'email': 'eloamaria@gmail.com', 'telefone': '9580651', 'endereco': 'Lisboa'}
+{'nome': 'Noemelly', 'email': 'noemelly@gmail.com', 'telefone': '9598429', 'endereco': 'Rio Maior'}

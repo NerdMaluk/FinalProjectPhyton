@@ -1,0 +1,70 @@
+Resumo do Programa de Gestão de Contactos
+Este programa é uma aplicação de linha de comando em Python destinada à gestão de uma lista de contactos. Ele permite adicionar, editar, remover, pesquisar e listar contactos, armazenando essas informações de forma persistente em um ficheiro de texto (contacts.txt). A estrutura do programa é dividida em dois arquivos principais: main.py e contacts.py.
+
+Estrutura e Lógica do Programa
+contacts.py:
+Contém todas as funções necessárias para manipulação de contactos e ficheiros.
+As funções incluem leitura e escrita do ficheiro, além de operações CRUD (Criar, Ler, Atualizar, Deletar).
+
+main.py:
+Gerencia a interação com o usuário através de um menu.
+Chama as funções do contacts.py com base na escolha do usuário.
+
+Funcionalidades e Funções
+
+Adicionar Contacto
+Função: adicionar_contacto(nome, email, numero, endereco)
+Descrição: Adiciona um novo contacto à lista após verificar se ele já não existe.
+Exceção: Levanta um ValueError se o contacto já existir.
+
+Editar Contacto
+Função: editar_contacto(nome, novo_nome=None, novo_email=None, novo_numero=None, novo_endereco=None)
+Descrição: Edita as informações de um contacto existente. Permite atualizar o nome, email, número de telefone e endereço.
+Exceção: Levanta um ValueError se o contacto não for encontrado.
+
+Remover Contacto
+Função: remover_contacto(nome)
+Descrição: Remove um contacto da lista após verificar se ele existe.
+Exceção: Levanta um ValueError se o contacto não for encontrado.
+
+Pesquisar Contacto por Nome
+Função: pesquisar_contacto_nome(nome)
+Descrição: Pesquisa e retorna as informações de um contacto pelo nome.
+Retorno: Retorna o contacto se encontrado, senão retorna None.
+
+Pesquisar Contacto por Número
+Função: pesquisar_contacto_numero(numero)
+Descrição: Pesquisa e retorna as informações de um contacto pelo número de telefone.
+Retorno: Retorna o contacto se encontrado, senão retorna None.
+
+Mostrar Todos os Contactos
+Função: mostrar_todos_contactos()
+Descrição: Lê e retorna todos os contactos armazenados no ficheiro.
+Retorno: Lista de todos os contactos.
+
+Leitura do Ficheiro
+Função: ler_ficheiro()
+Descrição: Lê os contactos do ficheiro contacts.txt e retorna uma lista de dicionários.
+
+Escrita no Ficheiro
+Função: escrever_ficheiro(contactos)
+Descrição: Escreve a lista de contactos no ficheiro contacts.txt.
+
+Menu de Interação
+O menu é exibido em um loop infinito até que o usuário escolha a opção de sair.
+Opções disponíveis no menu:
+Adicionar Contacto
+Editar Contacto
+Remover Contacto
+Pesquisar Contacto por Nome
+Pesquisar Contacto por Número
+Mostrar Todos os Contactos
+Sair
+Exemplo de Uso
+Ao executar o programa (main.py), o usuário verá o menu com as opções listadas. Dependendo da escolha, o programa solicitará as informações necessárias e chamará a função correspondente do contacts.py. As operações serão refletidas no ficheiro contacts.txt, garantindo a persistência dos dados.
+
+Tratamento de Exceções
+Adicionar Contacto: Verifica duplicação antes de adicionar.
+Editar Contacto: Verifica se o contacto existe antes de editar.
+Remover Contacto: Verifica se o contacto existe antes de remover.
+Leitura/Escrita: Verifica se o ficheiro existe antes de ler e escreve com segurança para evitar perda de dados.
